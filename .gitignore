@@ -1,12 +1,12 @@
 ###
 # Unity folders and files
 ###
-Project-A/[Aa]ssets/AssetStoreTools*
-Project-A/[Bb]uild/
-Project-A/[Ll]ibrary/
-Project-A/[Ll]ocal[Cc]ache/
-Project-A/[Oo]bj/
-Project-A/[Tt]emp/
+[Aa]ssets/AssetStoreTools*
+[Bb]uild/
+[Ll]ibrary/
+[Ll]ocal[Cc]ache/
+[Oo]bj/
+[Tt]emp/
 Project-A/[Uu]nityGenerated/
 # file on crash reports
 sysinfo.txt
