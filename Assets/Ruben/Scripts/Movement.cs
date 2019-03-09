@@ -13,7 +13,6 @@ public class Movement : MonoBehaviour
     public float gravity = 20.0f;
     
     private Vector3 moveDirection = Vector3.zero;
-    private Vector3 moveRotation = Vector3.zero;
     private CharacterController controller;
 
     void Start()
