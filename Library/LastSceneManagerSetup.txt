@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Ruben/Movement Test.unity
-  isLoaded: 1
-  isActive: 1
