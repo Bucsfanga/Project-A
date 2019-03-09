@@ -7,16 +7,13 @@ using System.Collections;
 
 public class Movement : MonoBehaviour
 {
-    public float speed = 6.0f;
+    public float translateSpeed = 6.0f;
+    public float rotateSpeed = 6.0f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
-    public float rotationX = 0.0f;
-    public float sensX = 100.0f;
-
-    public GameObject target;
     
-
     private Vector3 moveDirection = Vector3.zero;
+    private Vector3 moveRotation = Vector3.zero;
     private CharacterController controller;
 
     void Start()
@@ -29,19 +26,22 @@ public class Movement : MonoBehaviour
         
     }
 
-    void Update()
-    {
-        rotationX += Input.GetAxis("Mouse X") * sensX * Time.deltaTime;
-        transform.localEulerAngles = new Vector3(0, rotationX, 0);
+    void Update() {
+        if (Input.GetKey(KeyCode.A))
+            transform.Rotate(-Vector3.up * rotateSpeed * Time.deltaTime * 10);
+
+        if (Input.GetKey(KeyCode.D))
+            transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime * 10);
+
 
         if (controller.isGrounded)
         {
             // We are grounded, so recalculate
             // move direction directly from axes
 
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+            moveDirection = new Vector3(0.0f, 0.0f, Input.GetAxis("Vertical"));  
             moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection = moveDirection * speed;
+            moveDirection = moveDirection * translateSpeed;
 
             if (Input.GetButton("Jump"))
             {
