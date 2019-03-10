@@ -4,6 +4,7 @@ using System.Collections;
 public class ProjectileProperties : MonoBehaviour
 {
     public float lifetime;
+    public GameObject pSystem;
 
     void Start()
     {
@@ -23,6 +24,8 @@ public class ProjectileProperties : MonoBehaviour
         else
         {
             Debug.Log("hit");
+            Instantiate(pSystem, this.transform);
+            this.transform.DetachChildren();
             Destroy(this.gameObject);
         }
     }
