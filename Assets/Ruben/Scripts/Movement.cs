@@ -17,11 +17,8 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
+
         controller = GetComponent<CharacterController>();
-
-        // let the gameObject fall down
-        //gameObject.transform.position = new Vector3(0, 5, 0);
-
         
     }
 
@@ -35,8 +32,6 @@ public class Movement : MonoBehaviour
 
         if (controller.isGrounded)
         {
-            // We are grounded, so recalculate
-            // move direction directly from axes
 
             moveDirection = new Vector3(0.0f, 0.0f, Input.GetAxis("Vertical"));  
             moveDirection = transform.TransformDirection(moveDirection);
