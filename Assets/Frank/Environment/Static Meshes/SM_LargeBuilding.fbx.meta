@@ -9,16 +9,30 @@ ModelImporter:
     100006: //RootNode
     100008: transform17
     100010: transform18
+    100012: pCube34
+    100014: polySurface22
+    100016: polySurface23
+    100018: transform37
+    100020: transform38
     400000: polySurface15
     400002: polySurface16
     400004: polySurface17
     400006: //RootNode
     400008: transform17
     400010: transform18
+    400012: pCube34
+    400014: polySurface22
+    400016: polySurface23
+    400018: transform37
+    400020: transform38
     2100000: lambert2
+    2100002: lambert1
     2300000: polySurface17
+    2300002: polySurface23
     3300000: polySurface17
+    3300002: polySurface23
     4300000: polySurface17
+    4300002: polySurface23
   externalObjects: {}
   materials:
     importMaterials: 1
