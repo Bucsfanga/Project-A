@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33877202125085276}
   - component: {fileID: 23440675852276578}
   - component: {fileID: 136179717018486480}
+  - component: {fileID: 114940227163261098}
+  - component: {fileID: 114311772068729572}
   m_Layer: 0
   m_Name: MEnemy
   m_TagString: Enemy
@@ -84,6 +86,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1275585600494152}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114311772068729572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1275585600494152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06235bc168bc37947a21f3d2c98879a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+--- !u!114 &114940227163261098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1275585600494152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 709ca200f33806941949bad5bb0f5789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ForegroundImage: {fileID: 0}
+  updateSpeed: 0.5
 --- !u!136 &136179717018486480
 CapsuleCollider:
   m_ObjectHideFlags: 1

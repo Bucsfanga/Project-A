@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33670369287878304}
   - component: {fileID: 23932311315546498}
   - component: {fileID: 136351669154488280}
+  - component: {fileID: 114764202944900000}
+  - component: {fileID: 114603463159136270}
   m_Layer: 0
   m_Name: REnemy
   m_TagString: Enemy
@@ -84,6 +86,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1525395798312096}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114603463159136270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1525395798312096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06235bc168bc37947a21f3d2c98879a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+--- !u!114 &114764202944900000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1525395798312096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 709ca200f33806941949bad5bb0f5789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ForegroundImage: {fileID: 0}
+  updateSpeed: 0.5
 --- !u!136 &136351669154488280
 CapsuleCollider:
   m_ObjectHideFlags: 1
