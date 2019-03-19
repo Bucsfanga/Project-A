@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/public class MeleeEnemy : MonoBehaviour {
+/*public class MeleeEnemy : MonoBehaviour {
 
     public float fieldOfViewAngle = 110f;
     public bool playerInSight;
@@ -97,3 +97,4 @@ using UnityEngine;
         }
     }
 }
+*/
