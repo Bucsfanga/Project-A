@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*public class MeleeEnemy : MonoBehaviour {
+/public class MeleeEnemy : MonoBehaviour {
 
     public float fieldOfViewAngle = 110f;
     public bool playerInSight;
@@ -31,9 +31,9 @@ using UnityEngine;
     {
         col = GetComponent<SphereCollider>();
         anim = GetComponent<Animator>();
-        lastPlayerSighting = GameObject.FindGameObjectsWithTag(Tags.gameController).GetComponet<LastPlayerSighting>();
+        lastPlayerSighting = GameObject.Find("PlayerObject 1").GetComponet<LastPlayerSighting>();
         playerHealth = player.GetComponent<PlayerHealth>();
-        player = GameObject.FindGameObjectsWithTag(Tags.player);
+        player = GameObject.FindGameObjectWithTag("Player");
 
         //Use for when game begin enemies wont chase player
         playerLastSighting = lastPlayerSighting.resetPosition;
@@ -97,4 +97,3 @@ using UnityEngine;
         }
     }
 }
-*/
