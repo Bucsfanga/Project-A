@@ -1,4 +1,4 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +16,8 @@ public class EnemySpawn : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         StartCoroutine(waitSpawner());
 	}
 	
@@ -48,5 +49,5 @@ public class EnemySpawn : MonoBehaviour {
 
 
 }
-*/
+
 

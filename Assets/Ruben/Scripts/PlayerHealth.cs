@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour {
 
     public int health = 100;
+    //public Vector3 LastPlayerSighting;
 
 	// Use this for initialization
 	void Start () {
@@ -12,7 +13,11 @@ public class PlayerHealth : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+
+        //LastPlayerSighting = new Vector3 find.get
+
         if (health == 0) {
             Destroy(this.gameObject);
         }

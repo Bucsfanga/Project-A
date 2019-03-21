@@ -1,25 +1,29 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMeleeAI : MonoBehaviour {
+/*public class MeleeEnemy : MonoBehaviour {
 
     public float fieldOfViewAngle = 110f;
     public bool playerInSight;
     public Vector3 playerLastSighting;
     
-
+   
     private SphereCollider col;
     private Animator anim;
     private LastPlayerSighting lastPlayerSighting;
     private PlayerHealth playerHealth;
     private GameObject player;
     private Vector3 previousSighting;
-    private HashIDs hash;
+    private GameObject tower;
 
-	// Use this for initialization
-	void Start () {
-		
+
+
+
+    // Use this for initialization
+    void Start ()
+    {
+        		
 	}
 
     // Use to assigned varibles 
@@ -27,9 +31,9 @@ public class EnemyMeleeAI : MonoBehaviour {
     {
         col = GetComponent<SphereCollider>();
         anim = GetComponent<Animator>();
-        lastPlayerSighting = GameObject.FindGameObjectsWithTag(Tags.gameController).GetComponet<LastPlayerSighting>();
+        lastPlayerSighting = GameObject.Find("PlayerObject 1").GetComponet<LastPlayerSighting>();
         playerHealth = player.GetComponent<PlayerHealth>();
-        player = GameObject.FindGameObjectsWithTag(Tags.player);
+        player = GameObject.FindGameObjectWithTag("Player");
 
         //Use for when game begin enemies wont chase player
         playerLastSighting = lastPlayerSighting.resetPosition;
@@ -39,7 +43,8 @@ public class EnemyMeleeAI : MonoBehaviour {
 
 
     // Update is called once per frame
-    void Update () {
+    void Update ()
+    {
 
         if (lastPlayerSighting.position != previousSighting)
             playerLastSighting = lastPlayerSighting.position;
@@ -52,7 +57,22 @@ public class EnemyMeleeAI : MonoBehaviour {
             anim.SetBool(hash.playerInSightBool, false);
     }
 
-    private void OnTriggerStay(Collider other)
+    void Attack()
+    {
+
+    }
+
+    void RuntoTower()
+    {
+
+    }
+    
+    void Chaseplayer()
+    {
+
+    }
+
+    void OnTriggerStay(Collider other)
     {
         if(other.gameObject == player)
         {
