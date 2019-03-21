@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-
 public class ProjectileProperties : MonoBehaviour
 {
     public float lifetime;
@@ -8,13 +6,17 @@ public class ProjectileProperties : MonoBehaviour
 
     public float damage;
 
+    public bool isPlayer;
+
     void Start()
     {
         Destroy(gameObject, lifetime);
     }
     void OnCollisionEnter(Collision collision)
     {
-        if (this.gameObject.tag == "Player")
+        
+
+        if (isPlayer)
         {
 
             if (collision.gameObject.tag == "Player")
@@ -34,7 +36,7 @@ public class ProjectileProperties : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
-        else if (this.gameObject.tag == "Enemy") {
+        else if (!isPlayer) {
 
                             //Enemy Bullet Behaviour here.
             return;         //Delete this return when starting.
