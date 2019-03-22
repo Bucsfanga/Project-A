@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4833741728015548}
   - component: {fileID: 114459677233361400}
   m_Layer: 0
-  m_Name: NorthSpawnPoint
+  m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,12 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6689f07733dcc3342a9beba5304ab0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 1275585600494152, guid: be9791e92ee81024bb9832befe6a9494, type: 2}
-  - {fileID: 1525395798312096, guid: 9f1d062ca7fe1614f98148ad844c3785, type: 2}
-  spawnValues: {x: 5, y: 0, z: 5}
-  spawnWait: 0
-  spawnMostWait: 5
-  spawnLeastWait: 1
-  startWait: 2
-  stop: 0
+  MeleeSpawnGroup: []
+  MEnemy: {fileID: 0}

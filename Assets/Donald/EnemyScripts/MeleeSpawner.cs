@@ -20,18 +20,8 @@ public class MeleeSpawner : MonoBehaviour {
     {
         if (spawn)
         {
-
             randomSpawnPoint = Random.Range(0, MeleeSpawnGroup.Length);
             Instantiate(MEnemy, MeleeSpawnGroup[randomSpawnPoint].position, Quaternion.identity);
-
         }
     }
-
-
-
-
-
-
 }
-
-

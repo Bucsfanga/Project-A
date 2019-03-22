@@ -10,7 +10,7 @@ public class MeleeEnemy : MonoBehaviour {
     public Vector3 directionToGate;
     public Vector3 directionToPlayer;
     public float moveSpeed;
-
+    
 
     private GameObject gate;
     private PlayerHealth playerHealth;
@@ -26,7 +26,7 @@ public class MeleeEnemy : MonoBehaviour {
     {
         player = GameObject.Find("PlayerObject 1");
         gate = GameObject.Find("SM_MainGate");
-        moveSpeed = 10f;
+        moveSpeed = 0.5f;
         playerHealth = player.GetComponent<PlayerHealth>();
         nav = GetComponent<NavMeshAgent>();
 	}
@@ -43,50 +43,34 @@ public class MeleeEnemy : MonoBehaviour {
 
     void AttackGate()
     {
-        nav.destination = gate.transform.position;
+        directionToGate = gate.transform.position - transform.position;
+        directionToGate = directionToGate.normalized;
+        transform.Translate(directionToGate * moveSpeed, Space.World);
         
-        {
-
-        }
     }
 
     void AttackPlayer()
     {
-        nav.destination = player.transform.position;
-        
-        {
-
-        }
+        directionToPlayer = player.transform.position - transform.position;
+        directionToPlayer = directionToPlayer.normalized;
+        transform.Translate(directionToPlayer * moveSpeed, Space.World);
+                
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    //ContactPoint contact = collision.contacts[0];
-    //    ////Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
-    //    ////Vector3 pos = contact.point;
-    //    //Destroy(gameObject);
-    //}
+    private void OnCollisionEnter(Collision collision)
+    {
+        ContactPoint contact = collision.contacts[0];
+        Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
+        Vector3 pos = contact.point;
+        Destroy(gameObject);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject == player)
-        {
+        if (other.gameObject == player)      
+            playerInSight = true; 
+        else
             playerInSight = false;
-            Vector3 direction = other.transform.position - transform.position;
-            float angle = Vector3.Angle(direction, transform.forward);
-
-            if(angle < fieldOfViewAngle * 0.5f)
-            {
-                RaycastHit hit;
-
-                if(Physics.Raycast(transform.position + transform.up, direction.normalized, out hit, col.radius))
-                {
-                    if(hit.collider.gameObject == player)
-                    {
-                        playerInSight = true;                
-                    }
-                }
-            }
-        }
     }
+
 }
