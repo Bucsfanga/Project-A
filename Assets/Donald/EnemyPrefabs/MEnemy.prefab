@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33877202125085276}
   - component: {fileID: 23440675852276578}
   - component: {fileID: 136179717018486480}
+  - component: {fileID: 135259529986280456}
+  - component: {fileID: 114697352223768056}
   - component: {fileID: 114940227163261098}
   - component: {fileID: 114311772068729572}
   m_Layer: 0
@@ -98,6 +100,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+--- !u!114 &114697352223768056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1275585600494152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b7828f2d698684db96bd93a8372cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fieldOfViewAngle: 110
+  playerInSight: 0
+  directionToGate: {x: 0, y: 0, z: 0}
+  directionToPlayer: {x: 0, y: 0, z: 0}
+  moveSpeed: 0
 --- !u!114 &114940227163261098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,6 +129,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ForegroundImage: {fileID: 0}
   updateSpeed: 0.5
+--- !u!135 &135259529986280456
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1275585600494152}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 30
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136179717018486480
 CapsuleCollider:
   m_ObjectHideFlags: 1
