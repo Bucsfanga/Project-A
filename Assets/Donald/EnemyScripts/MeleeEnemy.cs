@@ -59,10 +59,23 @@ public class MeleeEnemy : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        ContactPoint contact = collision.contacts[0];
-        Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
-        Vector3 pos = contact.point;
-        Destroy(gameObject);
+        switch (col.gameObject.tag)
+        {
+            case "Player":
+                Destroy(col.gameObject);
+                Destroy(gameObject);
+                break;
+
+            case "Sword":
+                Destroy(col.gameObject);
+                Destroy(gameObject);
+                break;
+
+            case "Bullet":
+                Destroy(col.gameObject);
+                Destroy(gameObject);
+                break;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Frank/Scene/Blockout.unity
+- path: Assets/Donald/Scene/DonaldBlockout.unity
   isLoaded: 1
   isActive: 1
