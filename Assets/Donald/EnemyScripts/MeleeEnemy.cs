@@ -7,12 +7,12 @@ public class MeleeEnemy : MonoBehaviour {
 
     public float fieldOfViewAngle = 110f;
     public bool playerInSight;
-    public Vector3 directionToGate;
+    public Vector3 directionToTarget;
     public Vector3 directionToPlayer;
     public float moveSpeed;
     
 
-    private GameObject gate;
+    private GameObject target;
     private PlayerHealth playerHealth;
     private GameObject player;
     private SphereCollider col;
@@ -25,7 +25,7 @@ public class MeleeEnemy : MonoBehaviour {
     void Start ()
     {
         player = GameObject.Find("PlayerObject 1");
-        gate = GameObject.Find("SM_MainGate");
+        target = GameObject.Find("Target");
         moveSpeed = 0.5f;
         playerHealth = player.GetComponent<PlayerHealth>();
         nav = GetComponent<NavMeshAgent>();
@@ -37,15 +37,15 @@ public class MeleeEnemy : MonoBehaviour {
         if (playerInSight == true && playerHealth.health > 0f)
             AttackPlayer();
         else 
-            AttackGate();
+            AttackTarget();
     }
 
 
-    void AttackGate()
+    void AttackTarget()
     {
-        directionToGate = gate.transform.position - transform.position;
-        directionToGate = directionToGate.normalized;
-        transform.Translate(directionToGate * moveSpeed, Space.World);
+        directionToTarget = target.transform.position - transform.position;
+        directionToTarget = directionToTarget.normalized;
+        transform.Translate(directionToTarget * moveSpeed, Space.World);
         
     }
 
@@ -72,6 +72,11 @@ public class MeleeEnemy : MonoBehaviour {
                 break;
 
             case "Bullet":
+                Destroy(col.gameObject);
+                Destroy(gameObject);
+                break;
+
+            case "Target":
                 Destroy(col.gameObject);
                 Destroy(gameObject);
                 break;

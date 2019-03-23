@@ -24,4 +24,4 @@ public class MeleeSpawner : MonoBehaviour {
             Instantiate(MEnemy, MeleeSpawnGroup[randomSpawnPoint].position, Quaternion.identity);
         }
     }
-g}
+}
