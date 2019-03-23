@@ -35,6 +35,10 @@ ModelImporter:
     100058: transform80
     100060: transform81
     100062: transform82
+    100064: pCube135
+    100066: pCube136
+    100068: transform250
+    100070: transform251
     400000: pCube104
     400002: pCube105
     400004: pCube106
@@ -67,10 +71,17 @@ ModelImporter:
     400058: transform80
     400060: transform81
     400062: transform82
+    400064: pCube135
+    400066: pCube136
+    400068: transform250
+    400070: transform251
     2100000: lambert1
     2300000: pCube117
+    2300002: pCube136
     3300000: pCube117
+    3300002: pCube136
     4300000: pCube117
+    4300002: pCube136
   externalObjects: {}
   materials:
     importMaterials: 1
