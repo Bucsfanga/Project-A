@@ -23,7 +23,7 @@ public class RangeSpawner : MonoBehaviour {
     void Update()
     {
         currentTime -= 1 * Time.deltaTime;
-        print (currentTime);
+
 
         if (currentTime <= 0)
         {

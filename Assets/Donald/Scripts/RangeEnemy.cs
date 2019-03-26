@@ -11,6 +11,10 @@ public class RangeEnemy : MonoBehaviour
     private bool firing;
     private float damage = 45f;
 
+    public int health = 10;
+
+    public GameObject healthBar;
+
 
     // Use this for initialization
     void Start()
@@ -33,24 +37,11 @@ public class RangeEnemy : MonoBehaviour
     //        }
     //	}
 
-    private void OnCollisionEnter(Collision collision)
+    private void Update()
     {
-        switch (col.gameObject.tag)
+        if (health == 0)
         {
-            case "Player":
-                Destroy(col.gameObject);
-                Destroy(gameObject);
-                break;
-
-            case "Sword":
-                Destroy(col.gameObject);
-                Destroy(gameObject);
-                break;
-
-            case "Bullet":
-                Destroy(col.gameObject);
-                Destroy(gameObject);
-                break;
+            Destroy(this.gameObject);
         }
     }
 
@@ -62,4 +53,8 @@ public class RangeEnemy : MonoBehaviour
         }
     }
 
+    public void TakenDamage()
+    {
+        healthBar.transform.localScale = new Vector3(healthBar.transform.localScale.x / 2, 1, 1);
+    }
 }

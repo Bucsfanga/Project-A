@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Target
+  - Game Manager
+  - Ranged Enemy
+  - Melee Enemy
   layers:
   - Default
   - TransparentFX

@@ -10,12 +10,16 @@ public class MeleeEnemy : MonoBehaviour {
     public Vector3 directionToTarget;
     public Vector3 directionToPlayer;
     public float moveSpeed;
+
+    public GameObject healthBar;
     
 
     public GameObject target;
     private PlayerHealth playerHealth;
     public GameObject player;
     private SphereCollider col;
+
+    public int health = 2;
 
 
 
@@ -39,6 +43,11 @@ public class MeleeEnemy : MonoBehaviour {
             AttackPlayer();
         else 
             AttackTarget();
+
+        if (health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 
@@ -54,31 +63,6 @@ public class MeleeEnemy : MonoBehaviour {
         agent.destination = player.transform.position;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        switch (col.gameObject.tag)
-        {
-            case "Player":
-                Destroy(col.gameObject);
-                Destroy(gameObject);
-                break;
-
-            case "Sword":
-                Destroy(col.gameObject);
-                Destroy(gameObject);
-                break;
-
-            case "Bullet":
-                Destroy(col.gameObject);
-                Destroy(gameObject);
-                break;
-
-            case "Target":
-                Destroy(col.gameObject);
-                Destroy(gameObject);
-                break;
-        }
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -86,6 +70,11 @@ public class MeleeEnemy : MonoBehaviour {
             playerInSight = true; 
         else
             playerInSight = true;
+    }
+
+    public void TakenDamage() {
+
+        healthBar.transform.localScale = new Vector3(healthBar.transform.localScale.x / 2, 1, 1);
     }
 
 }

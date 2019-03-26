@@ -5,8 +5,9 @@ public class ProjectileProperties : MonoBehaviour
     public GameObject pSystem;
 
     public float damage;
-
     public bool isPlayer;
+
+    public MeleeEnemy damageScript;
 
     void Start()
     {
@@ -23,9 +24,20 @@ public class ProjectileProperties : MonoBehaviour
             {
                 Debug.Log("spawn");
             }
-            else if (collision.gameObject.tag == "Enemy")
+            else if (collision.gameObject.tag == "Melee Enemy")
             {
                 Debug.Log("ouch");
+                collision.gameObject.GetComponent<MeleeEnemy>().health--;
+                collision.gameObject.GetComponent<MeleeEnemy>().TakenDamage();
+                Debug.Log(collision.gameObject.GetComponent<MeleeEnemy>().health);
+                Destroy(this.gameObject);
+            }
+            else if (collision.gameObject.tag == "Ranged Enemy")
+            {
+                Debug.Log("ouch");
+                collision.gameObject.GetComponent<RangeEnemy>().health--;
+                collision.gameObject.GetComponent<RangeEnemy>().TakenDamage();
+                Debug.Log(collision.gameObject.GetComponent<RangeEnemy>().health);
                 Destroy(this.gameObject);
             }
             else

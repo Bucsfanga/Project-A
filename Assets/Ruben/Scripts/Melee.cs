@@ -43,10 +43,19 @@ public class Melee : MonoBehaviour {
 
         foreach(RaycastHit objectHit in hits)
         {
-            if (objectHit.transform.tag == "Enemy") {
+            if (objectHit.transform.tag == "Melee Enemy") {
+                objectHit.transform.GetComponent<MeleeEnemy>().health--;
+                objectHit.transform.GetComponent<MeleeEnemy>().TakenDamage();
                 print("enemy hit");
                 return true;
             }
+            else if (objectHit.transform.tag == "Ranged Enemy")
+                {
+                objectHit.transform.GetComponent<RangeEnemy>().health = objectHit.transform.GetComponent<RangeEnemy>().health- 5;
+                objectHit.transform.GetComponent<RangeEnemy>().TakenDamage();
+                print("enemy hit");
+                return true;
+                }
         }
         return false;
     }
