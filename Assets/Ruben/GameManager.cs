@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    void Start()
+
+    public Transform HealthBar;
+
+    private void Start()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        HealthBarSystem healthBarSystem = new HealthBarSystem(100);
+
+        Transform healthBarTransform = Instantiate(HealthBar, new Vector3(0, 10), Quaternion.identity);
+        HealthBar healthBar = healthBarTransform.GetComponent<HealthBar>();
+        healthBar.Setup(healthBarSystem);
     }
     private void Update()
     {
