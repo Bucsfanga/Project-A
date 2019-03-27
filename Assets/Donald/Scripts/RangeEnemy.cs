@@ -14,6 +14,7 @@ public class RangeEnemy : MonoBehaviour
     public int health = 10;
 
     public GameObject healthBar;
+    GameObject manager;
 
 
     // Use this for initialization
@@ -21,6 +22,7 @@ public class RangeEnemy : MonoBehaviour
     {
         player = GameObject.Find("PlayerObject 1");
         playerHealth = player.GetComponent<PlayerHealth>();
+        manager = GameObject.FindGameObjectWithTag("Game Manager");
     }
 
     //    // Update is called once per frame
@@ -41,6 +43,8 @@ public class RangeEnemy : MonoBehaviour
     {
         if (health <= 0)
         {
+            manager.GetComponent<GroundPlacement>().enemiesKilled++;
+            manager.GetComponent<GroundPlacement>().credits = manager.GetComponent<GroundPlacement>().credits + 20;
             Destroy(this.gameObject);
         }
     }

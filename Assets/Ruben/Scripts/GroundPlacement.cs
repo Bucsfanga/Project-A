@@ -6,6 +6,9 @@ public class GroundPlacement : MonoBehaviour {
     [SerializeField]
     private GameObject [] placeableGOs;
 
+    public int credits = 400;
+    public int enemiesKilled = 0;
+
     private GameObject currentGO;
 
     private float mouseWheelRotation;
@@ -30,7 +33,7 @@ public class GroundPlacement : MonoBehaviour {
         
         for (int i = 0; i < placeableGOs.Length; i++)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha0 + 1 + i))
+            if (Input.GetKeyDown(KeyCode.Alpha0 + 1 + i) && credits >= 100)
             {
                 isBeingPlaced = true;
                 if (PressedKeyOfCurrentPrefab(i))
@@ -75,6 +78,7 @@ public class GroundPlacement : MonoBehaviour {
 
     void ReleaseIfClicked() {
         if (Input.GetMouseButtonDown(0)) {
+            credits = credits - 100;
             isBeingPlaced = false;
             currentGO = null;
         }

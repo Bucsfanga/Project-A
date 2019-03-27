@@ -11,6 +11,8 @@ public class MeleeEnemy : MonoBehaviour {
     public Vector3 directionToPlayer;
     public float moveSpeed;
 
+    GameObject manager;
+
     public GameObject healthBar;
     
 
@@ -31,8 +33,7 @@ public class MeleeEnemy : MonoBehaviour {
         target = GameObject.Find("Target");
         moveSpeed = 0.5f;
         playerHealth = player.GetComponent<PlayerHealth>();
-
-
+        manager = GameObject.FindGameObjectWithTag("Game Manager");
         
 	}
 
@@ -46,6 +47,8 @@ public class MeleeEnemy : MonoBehaviour {
 
         if (health <= 0)
         {
+            manager.GetComponent<GroundPlacement>().enemiesKilled++;
+            manager.GetComponent<GroundPlacement>().credits = manager.GetComponent<GroundPlacement>().credits + 20;
             Destroy(this.gameObject);
         }
     }
@@ -71,6 +74,7 @@ public class MeleeEnemy : MonoBehaviour {
             collision.gameObject.GetComponent<TowerHealth>().health--;
             collision.gameObject.GetComponent<TowerHealth>().TakenDamage();
             Debug.Log(collision.gameObject.GetComponent<TowerHealth>().health);
+            manager.GetComponent<GroundPlacement>().enemiesKilled++;
             Destroy(this.gameObject);
         }
         else if (collision.gameObject.tag == "Player")
@@ -80,6 +84,7 @@ public class MeleeEnemy : MonoBehaviour {
             collision.gameObject.GetComponent<TowerHealth>().health--;
             collision.gameObject.GetComponent<TowerHealth>().TakenDamage();
             Debug.Log(collision.gameObject.GetComponent<TowerHealth>().health);
+            manager.GetComponent<GroundPlacement>().enemiesKilled++;
             Destroy(this.gameObject);
         }
     }
