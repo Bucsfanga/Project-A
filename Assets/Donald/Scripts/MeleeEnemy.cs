@@ -63,13 +63,37 @@ public class MeleeEnemy : MonoBehaviour {
         agent.destination = player.transform.position;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Target")
+        {
+            Debug.Log("ouch");
+            collision.gameObject.GetComponent<TowerHealth>().health--;
+            collision.gameObject.GetComponent<TowerHealth>().TakenDamage();
+            Debug.Log(collision.gameObject.GetComponent<TowerHealth>().health);
+            Destroy(this.gameObject);
+        }
+        else if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("ouch");
+            Debug.Log(collision.gameObject);
+            collision.gameObject.GetComponent<TowerHealth>().health--;
+            collision.gameObject.GetComponent<TowerHealth>().TakenDamage();
+            Debug.Log(collision.gameObject.GetComponent<TowerHealth>().health);
+            Destroy(this.gameObject);
+        }
+    }
+
+    void OnCollisionStay() {
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player)      
-            playerInSight = true; 
-        else
+        if (other.gameObject == player)
             playerInSight = true;
+        else
+            playerInSight = false;
     }
 
     public void TakenDamage() {

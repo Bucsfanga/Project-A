@@ -7,7 +7,6 @@ public class ProjectileProperties : MonoBehaviour
     public float damage;
     public bool isPlayer;
 
-    public MeleeEnemy damageScript;
 
     void Start()
     {

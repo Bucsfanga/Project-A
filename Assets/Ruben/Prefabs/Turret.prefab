@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33443325308293734}
   - component: {fileID: 23000291337195788}
   - component: {fileID: 114738385590798750}
+  - component: {fileID: 208497288298197768}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -96,3 +97,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 1448162520960148, guid: c6b4fd6f8f14db94999bf140da0a17a8, type: 2}
+--- !u!208 &208497288298197768
+NavMeshObstacle:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1125364928702762}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.588, y: 0.99300003, z: 3.8590002}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.98800004, z: 2.239}
+  m_TimeToStationary: 0.5
