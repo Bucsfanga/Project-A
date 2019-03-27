@@ -9,7 +9,7 @@ public class GroundPlacement : MonoBehaviour {
     public int credits = 400;
     public int enemiesKilled = 0;
 
-    private GameObject currentGO;
+    public GameObject currentGO;
 
     private float mouseWheelRotation;
     private int currentPrefabIndex = -1;

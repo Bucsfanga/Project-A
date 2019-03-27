@@ -7,7 +7,9 @@ public class Turret : MonoBehaviour {
     private GameObject target;
     private bool targetLocked;
     public float fireTimer;
-    private bool shotReady;
+    private bool shotReady = true;
+
+    private GameObject gm;
 
     public GameObject turretTopPart;
     public GameObject bulletSpawnPoint;
@@ -15,17 +17,20 @@ public class Turret : MonoBehaviour {
 
     private void Start()
     {
-        shotReady = true;
+        gm = GameObject.FindGameObjectWithTag("Game Manager");
     }
 
     private void Update()
     {
         if (targetLocked && target != null) {
+            if (gm.GetComponent<GroundPlacement>().currentGO == null)
+            {
+                turretTopPart.transform.LookAt(target.transform);
 
-            turretTopPart.transform.LookAt(target.transform);
-
-            if (shotReady) {
-                Shoot();
+                if (shotReady)
+                {
+                    Shoot();
+                }
             }
             
         }

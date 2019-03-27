@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Restart : MonoBehaviour {
@@ -17,8 +15,7 @@ public class Restart : MonoBehaviour {
         if (canRestart) {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                return;
-                //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene("MainMenu");
             }
         }
 	}
