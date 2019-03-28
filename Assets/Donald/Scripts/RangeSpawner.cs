@@ -22,14 +22,15 @@ public class RangeSpawner : MonoBehaviour {
 
     void Update()
     {
-        //currentTime -= 1 * Time.deltaTime;
+        currentTime -= 1 * Time.deltaTime;
 
-        //if (currentTime <= 0)
-        //{
-        //    spawn = false;
-        //}
-        //else
-        //    spawn = true;
+
+        if (currentTime <= 0)
+        {
+            spawn = false;
+        }
+        else
+            spawn = true;
     }
 
     void SpawnRange()
