@@ -1,0 +1,162 @@
+fileFormatVersion: 2
+guid: fe0e73a2eb5202e4cbfd04b5a6d9cb15
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Body_low
+    100002: Body_low 1
+    100004: group1
+    100006: Head_low
+    100008: LeftArm_low
+    100010: LeftLeg_low
+    100012: //RootNode
+    100014: polySurface1
+    100016: polySurface10
+    100018: polySurface18
+    100020: polySurface2
+    100022: polySurface20
+    100024: polySurface20 1
+    100026: polySurface21
+    100028: polySurface22
+    100030: polySurface23
+    100032: polySurface26
+    100034: polySurface3
+    100036: polySurface4
+    100038: polySurface6
+    100040: pSphere1
+    100042: RightArm_low
+    100044: RightLeg_low
+    100046: transform10
+    100048: transform11
+    100050: transform12
+    100052: transform13
+    100054: transform14
+    100056: transform15
+    100058: transform21
+    100060: transform22
+    100062: transform23
+    100064: transform24
+    100066: transform25
+    100068: transform26
+    100070: transform9
+    400000: Body_low
+    400002: Body_low 1
+    400004: group1
+    400006: Head_low
+    400008: LeftArm_low
+    400010: LeftLeg_low
+    400012: //RootNode
+    400014: polySurface1
+    400016: polySurface10
+    400018: polySurface18
+    400020: polySurface2
+    400022: polySurface20
+    400024: polySurface20 1
+    400026: polySurface21
+    400028: polySurface22
+    400030: polySurface23
+    400032: polySurface26
+    400034: polySurface3
+    400036: polySurface4
+    400038: polySurface6
+    400040: pSphere1
+    400042: RightArm_low
+    400044: RightLeg_low
+    400046: transform10
+    400048: transform11
+    400050: transform12
+    400052: transform13
+    400054: transform14
+    400056: transform15
+    400058: transform21
+    400060: transform22
+    400062: transform23
+    400064: transform24
+    400066: transform25
+    400068: transform26
+    400070: transform9
+    2100000: lambert1
+    2300000: Body_low
+    3300000: Body_low
+    4300000: Body_low
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
