@@ -1,9 +1,14 @@
-﻿using UnityEngine;
+﻿/*  ╔═════════════════════════════╡  Mech Defense Force 2019 ╞══════════════════╗            
+    ║ Authors:  Donald Thatcher          Email: donald.thatcher@outlook.com     ║
+    ╟───────────────────────────────────────────────────────────────────────────╢░ 
+    ║ Purpose:  Relay control inputs to player characater                       ║░
+    ║ Usage:    Player Characater                                               ║░
+    ╚═══════════════════════════════════════════════════════════════════════════╝░
+       ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+*/
+using UnityEngine;
 using System.Collections;
 
-// The GameObject is made to bounce using the space key.
-// Also the GameOject can be moved forward/backward and left/right.
-// Add a Quad to the scene so this GameObject can collider with a floor.
 
 public class PlayerMovement : MonoBehaviour
 {
