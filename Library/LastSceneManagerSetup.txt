@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Sandbox Test/Movement Test.unity
+- path: Assets/Scene/Levels/CircleMap.unity
   isLoaded: 1
   isActive: 1
