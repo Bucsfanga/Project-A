@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: 76481932435bc9143a9311e02d815d1a
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Box175
+    100002: //RootNode
+    100004: Object001
+    100006: Object024
+    100008: Rockets
+    100010: Rockets1
+    100012: Rockets10
+    100014: Rockets11
+    100016: Rockets12
+    100018: Rockets13
+    100020: Rockets2
+    100022: Rockets3
+    100024: Rockets4
+    100026: Rockets5
+    100028: Rockets6
+    100030: Rockets7
+    100032: Rockets8
+    100034: Rockets9
+    400000: Box175
+    400002: //RootNode
+    400004: Object001
+    400006: Object024
+    400008: Rockets
+    400010: Rockets1
+    400012: Rockets10
+    400014: Rockets11
+    400016: Rockets12
+    400018: Rockets13
+    400020: Rockets2
+    400022: Rockets3
+    400024: Rockets4
+    400026: Rockets5
+    400028: Rockets6
+    400030: Rockets7
+    400032: Rockets8
+    400034: Rockets9
+    2100000: rockets
+    2100002: Droidbody
+    2300000: Box175
+    2300002: Object001
+    2300004: Object024
+    2300006: Rockets
+    2300008: Rockets1
+    2300010: Rockets10
+    2300012: Rockets11
+    2300014: Rockets12
+    2300016: Rockets13
+    2300018: Rockets2
+    2300020: Rockets3
+    2300022: Rockets4
+    2300024: Rockets5
+    2300026: Rockets6
+    2300028: Rockets7
+    2300030: Rockets8
+    2300032: Rockets9
+    3300000: Box175
+    3300002: Object001
+    3300004: Object024
+    3300006: Rockets
+    3300008: Rockets1
+    3300010: Rockets10
+    3300012: Rockets11
+    3300014: Rockets12
+    3300016: Rockets13
+    3300018: Rockets2
+    3300020: Rockets3
+    3300022: Rockets4
+    3300024: Rockets5
+    3300026: Rockets6
+    3300028: Rockets7
+    3300030: Rockets8
+    3300032: Rockets9
+    4300000: Rockets1
+    4300002: Object024
+    4300004: Rockets2
+    4300006: Rockets
+    4300008: Rockets3
+    4300010: Rockets5
+    4300012: Rockets6
+    4300014: Rockets4
+    4300016: Rockets10
+    4300018: Rockets11
+    4300020: Rockets13
+    4300022: Rockets8
+    4300024: Rockets9
+    4300026: Rockets12
+    4300028: Rockets7
+    4300030: Object001
+    4300032: Box175
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

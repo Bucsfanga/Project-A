@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: c10df187cc7fd8549aee9359cae029c2
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Rockets
+    100004: Rockets1
+    100006: Rockets10
+    100008: Rockets11
+    100010: Rockets12
+    100012: Rockets13
+    100014: Rockets2
+    100016: Rockets3
+    100018: Rockets4
+    100020: Rockets5
+    100022: Rockets6
+    100024: Rockets7
+    100026: Rockets8
+    100028: Rockets9
+    400000: //RootNode
+    400002: Rockets
+    400004: Rockets1
+    400006: Rockets10
+    400008: Rockets11
+    400010: Rockets12
+    400012: Rockets13
+    400014: Rockets2
+    400016: Rockets3
+    400018: Rockets4
+    400020: Rockets5
+    400022: Rockets6
+    400024: Rockets7
+    400026: Rockets8
+    400028: Rockets9
+    2100000: rockets
+    2300000: Rockets
+    2300002: Rockets1
+    2300004: Rockets10
+    2300006: Rockets11
+    2300008: Rockets12
+    2300010: Rockets13
+    2300012: Rockets2
+    2300014: Rockets3
+    2300016: Rockets4
+    2300018: Rockets5
+    2300020: Rockets6
+    2300022: Rockets7
+    2300024: Rockets8
+    2300026: Rockets9
+    3300000: Rockets
+    3300002: Rockets1
+    3300004: Rockets10
+    3300006: Rockets11
+    3300008: Rockets12
+    3300010: Rockets13
+    3300012: Rockets2
+    3300014: Rockets3
+    3300016: Rockets4
+    3300018: Rockets5
+    3300020: Rockets6
+    3300022: Rockets7
+    3300024: Rockets8
+    3300026: Rockets9
+    4300000: Rockets1
+    4300002: Rockets2
+    4300004: Rockets
+    4300006: Rockets3
+    4300008: Rockets5
+    4300010: Rockets6
+    4300012: Rockets4
+    4300014: Rockets10
+    4300016: Rockets11
+    4300018: Rockets13
+    4300020: Rockets8
+    4300022: Rockets9
+    4300024: Rockets12
+    4300026: Rockets7
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

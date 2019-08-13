@@ -10,7 +10,7 @@ public class ProjectileProperties : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, lifetime);
+        
     }
     void OnCollisionEnter(Collision collision)
     {

@@ -4,7 +4,11 @@ public class ProjectileSpawn : MonoBehaviour
 {
     public Rigidbody projectile;
     public Transform Spawnpoint;
-    public float bulletSpeed;
+    public float bulletSpeed = 30;
+    public float weaponRange = 50f;
+
+
+    private Camera fpsCam;
 
     // Use this for initialization
     void Start()
@@ -21,6 +25,13 @@ public class ProjectileSpawn : MonoBehaviour
             clone = (Rigidbody)Instantiate(projectile, Spawnpoint.position, projectile.rotation);
 
             clone.velocity = Spawnpoint.TransformDirection(Vector3.forward * bulletSpeed);
+            Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
+            RaycastHit hit;
+
+            if(Physics.Raycast(rayOrigin,fpsCam.transform.forward, out hit, weaponRange))
+            {
+                hit.point;
+            }
         }
     }
 }
