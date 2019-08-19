@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour {
 
-
+    public float weaponRange = 50f;
+    private Camera fpsCam;
 
     private float minY = 70.0f;
     private float maxY = 150.0f;
@@ -16,10 +17,15 @@ public class CameraScript : MonoBehaviour {
     private float rotationY = 0.0f;
     private float offset = 1.5f;
 
-    //public GameObject target;
+    void Start()
+    {
+        fpsCam = GetComponentInChildren<Camera>();
+    }
 
     void Update()
     {
+        Vector3 lineOrgin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
+        Debug.DrawRay(lineOrgin, fpsCam.transform.forward * weaponRange, Color.green);
 
         //transform.position = new Vector3(target.transform.position.x, target.transform.position.y+ offset, target.transform.position.z);
         rotationX += Input.GetAxis("Mouse X") * sensX * Time.deltaTime;

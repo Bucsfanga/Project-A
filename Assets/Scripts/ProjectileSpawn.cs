@@ -3,17 +3,21 @@
 public class ProjectileSpawn : MonoBehaviour
 {
     public Rigidbody projectile;
-    public Transform Spawnpoint;
-    public float bulletSpeed = 30;
+    public Transform CannonBarrel;
+    public float projectileSpeed = 100;
     public float weaponRange = 50f;
 
 
+
     private Camera fpsCam;
+    private Ray ray;
+    private LineRenderer linesight;
 
     // Use this for initialization
     void Start()
     {
-
+        linesight = GetComponent<LineRenderer> ();
+        fpsCam = GetComponentInParent<Camera> ();
     }
 
     // Update is called once per frame
@@ -21,17 +25,20 @@ public class ProjectileSpawn : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Rigidbody clone;
-            clone = (Rigidbody)Instantiate(projectile, Spawnpoint.position, projectile.rotation);
-
-            clone.velocity = Spawnpoint.TransformDirection(Vector3.forward * bulletSpeed);
-            Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
+            // Create Ray from camera from middle of screen
+            ray = fpsCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             RaycastHit hit;
+            //Check for taget reticle of player aimimng circle to pass to projecticle
+            Vector3 aimPoint;
+            if (Physics.Raycast(ray, out hit))
+                aimPoint = hit.point;
+            else
+                aimPoint = ray.GetPoint(1000);
+            //Creates prokjectile being fire by player and sineds it to aim center fo screen
+            Rigidbody clone;
+            clone = (Rigidbody)Instantiate(projectile, CannonBarrel.position, projectile.rotation);
 
-            if(Physics.Raycast(rayOrigin,fpsCam.transform.forward, out hit, weaponRange))
-            {
-                hit.point;
-            }
+            clone.velocity = (aimPoint - CannonBarrel.transform.position).normalized * projectileSpeed;
         }
     }
 }

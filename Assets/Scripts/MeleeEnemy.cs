@@ -14,11 +14,11 @@ public class MeleeEnemy : MonoBehaviour {
     GameObject manager;
 
     public GameObject healthBar;
-    
-
-    public GameObject target;
-    private PlayerHealth playerHealth;
     public GameObject player;
+    public GameObject target;
+
+
+    private PlayerHealth playerHealth;
     private SphereCollider col;
 
     public int health = 2;
@@ -29,7 +29,7 @@ public class MeleeEnemy : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        player = GameObject.Find("PlayerObject 1");
+        player = GameObject.Find("Player");
         target = GameObject.Find("Target");
         moveSpeed = 0.5f;
         playerHealth = player.GetComponent<PlayerHealth>();

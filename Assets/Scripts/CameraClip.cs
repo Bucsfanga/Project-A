@@ -35,7 +35,6 @@ public class CameraClip : MonoBehaviour
         }
 
         transform.position = Vector3.Lerp(transform.position, wantedPosition, Time.deltaTime * damping);
-
         Vector3 lookPosition = target.TransformPoint(targetLookAtOffset);
 
         if (smoothRotation)
