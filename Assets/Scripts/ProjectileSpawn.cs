@@ -1,23 +1,23 @@
 ﻿using UnityEngine;
 
-public class ProjectileSpawn : MonoBehaviour
-{
+public class ProjectileSpawn : MonoBehaviour {
+    #region Public
+
     public Rigidbody projectile;
     public Transform CannonBarrel;
     public float projectileSpeed = 100;
-    public float weaponRange = 50f;
+    public float weaponRange = 100f;
+    public Camera fpsCam;
+    #endregion
 
+    #region Private
 
-
-    private Camera fpsCam;
-    private Ray ray;
-    private LineRenderer linesight;
+    #endregion
 
     // Use this for initialization
     void Start()
     {
-        linesight = GetComponent<LineRenderer> ();
-        fpsCam = GetComponentInParent<Camera> ();
+
     }
 
     // Update is called once per frame
@@ -25,20 +25,24 @@ public class ProjectileSpawn : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            // Create Ray from camera from middle of screen
-            ray = fpsCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-            RaycastHit hit;
-            //Check for taget reticle of player aimimng circle to pass to projecticle
-            Vector3 aimPoint;
-            if (Physics.Raycast(ray, out hit))
-                aimPoint = hit.point;
-            else
-                aimPoint = ray.GetPoint(1000);
-            //Creates prokjectile being fire by player and sineds it to aim center fo screen
+            Shoot();
+        }
+    }
+
+    void Shoot()
+    {
+        // Create Ray from camera from middle of screen
+        //ray = fpsCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+
+
+        //Check for taget reticle of player aimimng circle to pass to projecticle
+        RaycastHit hit;
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, weaponRange))
+        {
+            Debug.Log(hit.transform.name);
             Rigidbody clone;
             clone = (Rigidbody)Instantiate(projectile, CannonBarrel.position, projectile.rotation);
-
-            clone.velocity = (aimPoint - CannonBarrel.transform.position).normalized * projectileSpeed;
-        }
+            clone.velocity = transform.forward * projectileSpeed;
+        }        
     }
 }

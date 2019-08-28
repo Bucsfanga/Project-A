@@ -1,8 +1,8 @@
 ﻿/*  ╔═════════════════════════════╡  Mech Defense Force 2019 ╞══════════════════╗            
     ║ Authors:  Donald Thatcher          Email: donald.thatcher@outlook.com     ║
     ╟───────────────────────────────────────────────────────────────────────────╢░ 
-    ║ Purpose:  Contorl Drone Missle mechaics                                   ║░
-    ║ Usage:    Handles drone missle launches and targets package               ║░
+    ║ Purpose:  Contorls UAV Missile System                                     ║░
+    ║ Usage:    Handles drone missile launches and targets package              ║░
     ╚═══════════════════════════════════════════════════════════════════════════╝░
        ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 */
@@ -12,28 +12,38 @@ using UnityEngine;
 
 public class Missile : MonoBehaviour {
 
-    public float mach;
+    #region Public
+
+    public Transform target;
     public GameObject ExplosionSFX;
-    private Rigidbody missle;
-    private bool launched;
+    #endregion
+
+    #region Private
+
+    private float mach = 20f;
+    private float rotateSpeed = 10f;
+    private Rigidbody missile;
+    private bool launced;
+    #endregion
 
     // Use this for initialization
     void Start () {
-        missle = GetComponent<Rigidbody>();
-        launched = false;		
+        launced = false;
+        missile = GetComponent<Rigidbody>();
+        target = GameObject.Find("Player").transform;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        if (Input.GetButtonDown("Fire1")) {
-            missle.isKinematic = false;
-            missle.velocity = transform.forward * mach;
-            launched = true;
-        }
-        if (launched)
-            transform.rotation = Quaternion.LookRotation(missle.velocity);
-	}
+	private void FixedUpdate () {        
+            Launch();     
+    }
 
+    void Launch()
+    {
+        missile.velocity = transform.forward * mach;
+        var missileTargetRotation = Quaternion.LookRotation(target.position - missile.position);
+        missile.MoveRotation(Quaternion.RotateTowards(transform.rotation, missileTargetRotation, rotateSpeed));
+    }
 
     private void OnCollisionEnter(Collision collision)
     {

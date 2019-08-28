@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
-public class ProjectileProperties : MonoBehaviour
-{
+public class ProjectileProperties : MonoBehaviour {
     public float lifetime;
     public GameObject pSystem;
 
